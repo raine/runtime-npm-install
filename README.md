@@ -63,7 +63,7 @@ npmInstallAsync([
 
 #### `npmImportAsync(packages: string[], installPath?: string): Promise<...>`
 
-Installs specified packages, returning a list of exported values corresponding
+Installs specified packages, returning a list of exports corresponding
 to each package.
 
 ##### example
@@ -108,4 +108,4 @@ console.log('tmpDir', tmpDir)
 })()
 ```
 
-![](https://raine.github.io/runtime-npm-install/screenshot-1.png)
+![](https://raine.github.io/runtime-npm-install/screenshot-1.png?1)
