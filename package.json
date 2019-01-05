@@ -1,7 +1,7 @@
 {
   "name": "runtime-npm-install",
   "version": "1.0.0",
-  "description": "TODO",
+  "description": "Install npm modules programmatically at runtime",
   "main": "index.js",
   "scripts": {},
   "keywords": [
