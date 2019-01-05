@@ -1,4 +1,4 @@
-const { npmInstallAsync } = require('.')
+const { npmInstallAsync } = require('../')
 const path = require('path')
 const taim = require('taim')
 
