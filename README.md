@@ -1,7 +1,17 @@
 # runtime-npm-install
 
-Install npm modules programmatically through
-[`npm-install-to`](https://github.com/raine/npm-install-to)
+Install npm modules programmatically
+
+## key features
+
+- under the hood, uses globally installed npm through
+  [`npm-install-to`](https://github.com/raine/npm-install-to) 
+- takes packages in the equivalent format as `npm install`
+  - `@scope/name`
+  - `name@tag/version`
+  - `githubusername/repo`
+  - etc.
+- once installed packages will resolve instantly due to caching
 
 ## install
 
@@ -63,8 +73,8 @@ npmInstallAsync([
 
 #### `npmImportAsync(packages: string[], installPath?: string): Promise<...>`
 
-Installs specified packages, returning a list of exports corresponding
-to each package.
+Installs specified packages, returning exports corresponding to each package as
+a list.
 
 ##### example
 
@@ -82,7 +92,7 @@ const { npmImportAsync } = require('runtime-npm-install')
 })()
 ```
 
-### demo of debugging and cache
+### demo of debug logging and cache
 
 
 ```js
@@ -108,4 +118,4 @@ console.log('tmpDir', tmpDir)
 })()
 ```
 
-![](https://raine.github.io/runtime-npm-install/screenshot-1.png?1)
+![](https://raine.github.io/runtime-npm-install/screenshot-1.png?3)
