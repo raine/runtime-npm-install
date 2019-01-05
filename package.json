@@ -1,0 +1,26 @@
+{
+  "name": "runtime-npm-install",
+  "version": "1.0.0",
+  "description": "TODO",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [
+    "npm",
+    "npm install",
+    "api"
+  ],
+  "author": "Raine Virta <raine.virta@gmail.com>",
+  "license": "MIT",
+  "repository": "raine/runtime-npm-intsall",
+  "dependencies": {
+    "npm-install-to": "^1.2.1",
+    "tempy": "^0.2.1"
+  },
+  "files": [
+    "index.js",
+    "lib/*.js"
+  ],
+  "devDependencies": {
+    "taim": "^1.1.0"
+  }
+}
