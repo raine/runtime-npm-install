@@ -38,12 +38,14 @@ on that available with `npm help install`.
 
 #### `npmInstallAsync(packages: string[], installPath?: string): Promise<...>`
 
-Installs specified packages, returning a promise that resolves to metadata and
-package.json of the installed packages.
+Installs specified packages, returning a promise that resolves to an object
+containing output of `npm install` and metadata of installed packages.
 
 ##### example
 
 ```js
+const { npmInstallAsync } = require('../')
+const path = require('path')
 const tmpDir = path.join(require('os').tmpdir(), 'my-app')
 npmInstallAsync([
   'treis@2.6.0',
@@ -53,22 +55,27 @@ npmInstallAsync([
 .then(console.log)
 ```
 
-```
-[ { spec: 'treis@2.6.0',
-    name: 'treis',
-    json: [Object], // package.json
-    path:
-     '/var/folders/5w/g91lyqdd20b4wsrb2r434nwr0000gn/T/my-app/node_modules/treis' },
-  { spec: 'lodash',
-    name: 'lodash',
-    json: [Object],
-    path:
-     '/var/folders/5w/g91lyqdd20b4wsrb2r434nwr0000gn/T/my-app/node_modules/lodash' },
-  { spec: 'ramda@0.26.1',
-    name: 'ramda',
-    json: [Object],
-    path:
-     '/var/folders/5w/g91lyqdd20b4wsrb2r434nwr0000gn/T/my-app/node_modules/ramda' } ]
+##### output
+
+```js
+{ packages:
+   [ { spec: 'treis@2.6.0',
+       name: 'treis',
+       json: [Object],
+       path:
+        '/var/folders/5w/g91lyqdd20b4wsrb2r434nwr0000gn/T/my-app/node_modules/treis' },
+     { spec: 'lodash',
+       name: 'lodash',
+       json: [Object],
+       path:
+        '/var/folders/5w/g91lyqdd20b4wsrb2r434nwr0000gn/T/my-app/node_modules/lodash' },
+     { spec: 'ramda@0.26.1',
+       name: 'ramda',
+       json: [Object],
+       path:
+        '/var/folders/5w/g91lyqdd20b4wsrb2r434nwr0000gn/T/my-app/node_modules/ramda' } ],
+  npmOutput:
+   '+ treis@2.6.0\n+ ramda@0.26.1\n+ lodash@4.17.11\nadded 12 packages from 9 contributors and audited 15 packages in 1.492s\nfound 0 vulnerabilities' }
 ```
 
 #### `npmImportAsync(packages: string[], installPath?: string): Promise<...>`
