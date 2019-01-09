@@ -6,6 +6,12 @@ const fs = require('fs')
 
 const readFile = util.promisify(fs.readFile)
 const readJsonFile = (p) => readFile(p, 'utf8').then(JSON.parse)
+const flip = (fn) => {
+  return function(first, second) {
+    var rest = [].slice.call(arguments, 2)
+    return fn.apply(null, [second, first].concat(rest))
+  }
+}
 
 const npmInstallAsync = async (
   packages,
@@ -45,5 +51,5 @@ const npmImportAsync = async (packages, installPath = tempy.directory()) => {
 module.exports = {
   npmInstallAsync,
   npmImportAsync,
-  getPkgsToBeInstalled
+  getPkgsToBeInstalled: flip(getPkgsToBeInstalled)
 }

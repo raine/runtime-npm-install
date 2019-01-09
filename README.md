@@ -83,7 +83,7 @@ npmInstallAsync([
 Installs specified packages, returning exports corresponding to each package as
 a list.
 
-#### `getPkgsToBeInstalled(installPath: string, packages: string[]): Promise<string[]>`
+#### `getPkgsToBeInstalled(packages: string[], installPath: string): Promise<string[]>`
 
 Use to check which given packages would be installed by either of the functions.
 
