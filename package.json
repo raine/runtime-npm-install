@@ -1,6 +1,6 @@
 {
   "name": "runtime-npm-install",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "description": "Install npm modules programmatically at runtime",
   "main": "index.js",
   "scripts": {},
