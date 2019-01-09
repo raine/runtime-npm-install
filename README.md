@@ -36,7 +36,7 @@ on that available with `npm help install`.
 
 ### API
 
-#### `npmInstallAsync(packages: string[], installPath?: string): Promise<...>`
+#### `npmInstallAsync(packages: string[], installPath?: string, npmInstallToOpts: Object): Promise<...>`
 
 Installs specified packages, returning a promise that resolves to an object
 containing output of `npm install` and metadata of installed packages.
@@ -82,6 +82,12 @@ npmInstallAsync([
 
 Installs specified packages, returning exports corresponding to each package as
 a list.
+
+#### `getPkgsToBeInstalled(installPath: string, packages: string[]): Promise<string[]>`
+
+Use to check which given packages would be installed by either of the functions.
+
+This function comes directly from [`npm-install-to`](https://github.com/raine/npm-install-to).
 
 ##### example
 
