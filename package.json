@@ -13,7 +13,7 @@
   "license": "MIT",
   "repository": "raine/runtime-npm-intsall",
   "dependencies": {
-    "npm-install-to": "^2.0.0",
+    "npm-install-to": "^3.0.0",
     "tempy": "^0.2.1"
   },
   "files": [
