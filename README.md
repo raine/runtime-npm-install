@@ -36,7 +36,7 @@ on that available with `npm help install`.
 
 ### API
 
-#### `npmInstallAsync(packages: string[], installPath?: string, npmInstallToOpts: Object): Promise<...>`
+#### `npmInstallAsync(packages: string[], installPath?: string, npmInstallToOpts?: Object): Promise<...>`
 
 Installs specified packages, returning a promise that resolves to an object
 containing output of `npm install` and metadata of installed packages.
@@ -78,7 +78,7 @@ npmInstallAsync([
    '+ treis@2.6.0\n+ ramda@0.26.1\n+ lodash@4.17.11\nadded 12 packages from 9 contributors and audited 15 packages in 1.492s\nfound 0 vulnerabilities' }
 ```
 
-#### `npmImportAsync(packages: string[], installPath?: string): Promise<...>`
+#### `npmImportAsync(packages: string[], installPath?: string, npmInstallToOpts?: Object): Promise<...>`
 
 Installs specified packages, returning exports corresponding to each package as
 a list.

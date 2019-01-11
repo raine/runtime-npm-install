@@ -43,8 +43,16 @@ const npmInstallAsync = async (
   }
 }
 
-const npmImportAsync = async (packages, installPath = tempy.directory()) => {
-  const { packages: installed } = await npmInstallTo(installPath, packages)
+const npmImportAsync = async (
+  packages,
+  installPath = tempy.directory(),
+  npmInstallToOpts
+) => {
+  const { packages: installed } = await npmInstallTo(
+    installPath,
+    packages,
+    npmInstallToOpts
+  )
   return packages.map((pkg) => require(installed[pkg]))
 }
 
