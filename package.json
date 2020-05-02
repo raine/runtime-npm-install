@@ -11,7 +11,7 @@
   ],
   "author": "Raine Virta <raine.virta@gmail.com>",
   "license": "MIT",
-  "repository": "raine/runtime-npm-intsall",
+  "repository": "raine/runtime-npm-install",
   "dependencies": {
     "npm-install-to": "^3.0.0",
     "tempy": "^0.2.1"
